@@ -151,11 +151,11 @@ class GPT_Forward(LLM):
             text = [prompt]
         config = self.config['gpt_config'].copy()
         config['n'] = n
-        print("PROMPT:")
-        print(prompt)
         # If there are any [APE] tokens in the prompts, remove them
         for i in range(len(prompt)):
             prompt[i] = prompt[i].replace('[APE]', '').strip()
+        print("PROMPT:")
+        print(prompt)
         response = None
         while response is None:
             try:
