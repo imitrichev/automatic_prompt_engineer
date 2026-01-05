@@ -11,7 +11,7 @@ setup(
     package_data={'automatic_prompt_engineer': ['configs/*']},
     install_requires=[
         'numpy',
-        'openai',
+        'openai<=0.29',
         'fire',
         'tqdm',
         'gradio',
